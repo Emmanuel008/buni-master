@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hub of Hubs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: #f8f9fa;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .hero {
+            height: 600px;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('your-background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">HUB</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#program">Program</a>
+                <a href="#success">Success Stories</a>
+                <a href="#community">Community</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>THE HUB OF HUBS</h1>
+            <p>Connecting Communities, Empowering Innovation</p>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="section">
+            <h2>About Us</h2>
+            <p>Welcome to the Hub of Hubs, where innovation meets collaboration. We bring together diverse communities and resources to create meaningful impact and drive positive change.</p>
+        </section>
+
+        <section class="section">
+            <h2>Our Programs</h2>
+            <p>Discover our range of programs designed to support and accelerate your journey towards success. From mentorship to resources, we're here to help you grow.</p>
+        </section>
+
+        <section class="section">
+            <h2>Join Our Community</h2>
+            <p>Be part of a thriving ecosystem of innovators, entrepreneurs, and change-makers. Connect, learn, and grow with like-minded individuals.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 The Hub of Hubs. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
