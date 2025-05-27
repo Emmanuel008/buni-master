@@ -42,6 +42,12 @@ const Navbar = () => {
             <span>Success Stories</span>
           </Link>
           <Link 
+            to="/space" 
+            className={location.pathname === "/space" ? "active" : ""}
+          >
+            <span>Space</span>
+          </Link>
+          <Link 
             to="/blog" 
             className={location.pathname === "/blog" ? "active" : ""}
           >
