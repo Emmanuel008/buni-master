@@ -52,40 +52,6 @@ const SingleCard = ({ image, name, role, company, sector, location, id, onMore, 
           <button onClick={onMore} style={{ background: 'none', color: '#FF6347', border: 'none', cursor: 'pointer', fontWeight: 600, fontSize: 15, textDecoration: 'underline' }}>More</button>
         </div>
       </div>
-      {extra?.supportedByCostech === "Yes" && (
-        <div style={{
-          position: 'absolute',
-          bottom: '10px',
-          right: '10px',
-          zIndex: 2,
-          background: '#FF6347',
-          color: 'white',
-          width: '70px',
-          height: '70px',
-          clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
-          fontSize: '9px',
-          fontWeight: 'bold',
-          textAlign: 'center',
-          padding: '5px',
-          lineHeight: '1.1',
-          border: '2px solid white',
-        }}>
-          <span style={{ 
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '100%',
-            textAlign: 'center',
-            padding: '0 5px',
-            letterSpacing: '0.5px',
-          }}>Under COSTECH</span>
-        </div>
-      )}
     </div>
   );
 };
@@ -578,6 +544,66 @@ const Space = () => {
           Innovation Spaces
         </h1>
       </div>
+
+      {/* Sidebar and Map Section */}
+      <div style={{
+        display: 'flex',
+        gap: '2rem',
+        marginBottom: '2rem',
+        padding: '0 1rem',
+      }}>
+        {/* Description Sidebar */}
+        <div style={{
+          flex: '1',
+          background: '#fff',
+          padding: '2rem',
+          borderRadius: '10px',
+          boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
+        }}>
+          <h2 style={{
+            color: '#FF6347',
+            fontSize: '1.5rem',
+            marginBottom: '1rem',
+            fontWeight: 600,
+          }}>About Innovation Spaces</h2>
+          <p style={{
+            color: '#666',
+            lineHeight: 1.6,
+            marginBottom: '1rem',
+          }}>
+            Innovation spaces in Tanzania are hubs of creativity and technological advancement, fostering entrepreneurship and economic growth. These spaces provide essential resources, mentorship, and networking opportunities for startups and innovators across various sectors including ICT, Agriculture, Manufacturing, and Education.
+          </p>
+          <p style={{
+            color: '#666',
+            lineHeight: 1.6,
+          }}>
+            Our network of innovation spaces includes incubators, accelerators, maker spaces, and research & development hubs, each contributing uniquely to Tanzania's innovation ecosystem. These spaces are strategically located across the country to ensure accessibility and regional development.
+          </p>
+        </div>
+
+        {/* Map Section */}
+        <div style={{
+          flex: '1',
+          background: '#fff',
+          padding: '1rem',
+          borderRadius: '10px',
+          boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
+          height: '400px',
+        }}>
+          <iframe
+            title="Map of Tanzania showing innovation spaces locations"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4080938.061789!2d34.0!3d-6.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1234567890"
+            width="100%"
+            height="100%"
+            style={{ border: 0, borderRadius: '8px' }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </div>
+
+      {/* Cards Section */}
       <div className="space-container" style={{ padding: '0 10px' }}>
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 24, gap: 12 }}>
           <form onSubmit={handleSearch} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -755,7 +781,6 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Programs Offered:</strong> Corporate strategy development, marketing, financial management, leadership, pitching, STEM skills</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Infrastructure (space, equipment, internet) and funding</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Mentorship programs, startup competitions, workshops, funding access, industry partnerships</li>
-          <li style={liStyle}><strong>Supported by COSTECH:</strong> Yes (Networking opportunities, funding for STEM and exhibitions)</li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -811,7 +836,6 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Programs Offered:</strong> Marketing training</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Resource constraints, access to funding, and updated technology</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Mentorship programs, workshops, business plan reviews</li>
-          <li style={liStyle}><strong>Supported by COSTECH:</strong> No</li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -867,7 +891,6 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Programs Offered:</strong> Business development training</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Capacity building and funding</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Mentorship programs, access to funding</li>
-          <li style={liStyle}><strong>Supported by COSTECH:</strong> No</li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -923,7 +946,6 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Programs Offered:</strong> Business development training</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Funding</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Access to funding, workshops</li>
-          <li style={liStyle}><strong>Supported by COSTECH:</strong> Yes (Funding for incubates)</li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -979,7 +1001,6 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Programs Offered:</strong> Pitching training</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Access to funds</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Access to funding</li>
-          <li style={liStyle}><strong>Supported by COSTECH:</strong> No</li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -1035,7 +1056,6 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Programs Offered:</strong> Entrepreneurship bootcamps, business development, pitching, marketing, digital literacy, leadership, intellectual property management, ICT, AI</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Limited funding, poor infrastructure, inaccessible internet, low tech capacity</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> All (funding, mentorship, workshops, industry partnerships, policy advocacy)</li>
-          <li style={liStyle}><strong>Supported by COSTECH:</strong> Yes (Capacity building)</li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -1091,7 +1111,6 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Programs Offered:</strong> Ethical branding, modest fashion, digital storytelling, entrepreneurship, mental wellness, faith-aligned creative leadership</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Limited funding, rural infrastructure gaps, low digital access, cultural misconceptions</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Workshops, startup competitions</li>
-          <li style={liStyle}><strong>Supported by COSTECH:</strong> No</li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -1146,7 +1165,6 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Programs Offered:</strong> Horticulture education, business compliance, export knowledge, entrepreneurship</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Skills, equipment, and funding</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Workshops, technology transfer, business networking</li>
-          <li style={liStyle}><strong>Supported by COSTECH:</strong> No</li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -1202,7 +1220,6 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Programs Offered:</strong> Business development, fund support</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Lack of materials and funding for manufacturing</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Access to funding, technology support</li>
-          <li style={liStyle}><strong>Supported by COSTECH:</strong> No</li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -1258,7 +1275,6 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Programs Offered:</strong> Business development, compliance issues, pitching</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Lack of funds to run programs</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Access to funding, partnerships with investors and government</li>
-          <li style={liStyle}><strong>Supported by COSTECH:</strong> No</li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -1314,7 +1330,6 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Programs Offered:</strong> Business development training</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Poor equipment</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Workshops, technical support</li>
-          <li style={liStyle}><strong>Supported by COSTECH:</strong> Yes</li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -1370,7 +1385,6 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Programs Offered:</strong> Agribusiness development, leadership, pitching, marketing</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Lack of funds and experts</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Access to funding, partnerships with CGIAR</li>
-          <li style={liStyle}><strong>Supported by COSTECH:</strong> No</li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -1426,7 +1440,6 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Programs Offered:</strong> Business skills (developing a business plan and sustainable business models), technology skills (hands-on training in electronics prototyping, Arduino programming)</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Many participants lack foundational business and technical skills, requiring significant investment in training before they can launch viable startups.</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Policy advocacy and regulatory support, market access and partnerships</li>
-          <li style={liStyle}><strong>Supported by COSTECH:</strong> No</li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -1482,7 +1495,6 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Programs Offered:</strong> Business idea pitching, preparation of innovation programs, service marketing</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Fund shortage, lack of facilities to support development of Minimum Viable Products (MVPs), lack of operational manual</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Facilitation of workshops and boot camps</li>
-          <li style={liStyle}><strong>Supported by COSTECH:</strong> Yes (Funding for an innovator)</li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -1528,14 +1540,11 @@ const SpaceDetails = ({ founder }) => {
     <div>
       <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{extra.spaceName || founder.name}</h2>
       <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
-        {/* First four fields in specified order */}
         <li style={liStyle}><strong>Space Name:</strong> {extra.spaceName || founder.name}</li>
         <li style={liStyle}><strong>Sector:</strong> {extra.sectorFocus || founder.company}</li>
         <li style={liStyle}><strong>Type of Space:</strong> {extra.spaceType}</li>
         <li style={liStyle}><strong>Description / Programs:</strong> {extra.collaborationsOther || extra.collaborations || "Business plan and prototype reviews, Startup competitions and pitch events, Facilitation of workshops and boot camps"}</li>
         <li style={liStyle}><strong>Beneficiaries:</strong> {extra.capacityBuilding || "Youth entrepreneurs, early-stage startups, and innovators"}</li>
-
-        {/* All other fields in their original order */}
         <li style={liStyle}><strong>Year Established:</strong> {extra.yearEstablished}</li>
         <li style={liStyle}><strong>Target Audience:</strong> {extra.targetAudience}</li>
         <li style={liStyle}><strong>Support Needed:</strong> {extra.supportNeededOther ? (extra.supportNeeded + " (" + extra.supportNeededOther + ")") : extra.supportNeeded}</li>
@@ -1546,7 +1555,6 @@ const SpaceDetails = ({ founder }) => {
         <li style={liStyle}><strong>Area of Capacity Building:</strong> {extra.trainingTopics}</li>
         <li style={liStyle}><strong>Interested in Events:</strong> {extra.interestedEvents}</li>
         <li style={liStyle}><strong>Event Focus:</strong> {extra.eventFocus}</li>
-        <li style={liStyle}><strong>Supported by COSTECH:</strong> {extra.supportedByCostech}</li>
         <li style={liStyle}><strong>Open to Partnerships:</strong> {extra.openToPartnerships}</li>
         <li style={liStyle}><strong>Partnerships Types:</strong> {extra.partnerTypes}</li>
       </ul>
