@@ -39,33 +39,42 @@ const ProgramsPage = () => {
   return (
     <div className="page-container">
       <Navbar />
-      <section className="programs-section" id="programs">
-        <div className="programs-container">
-          <h2>OUR PROGRAMS</h2>
-          <h1>What We Offer</h1>
-          
-          <div className="programs-grid">
-            {programs.map((program) => (
-              <div key={program.id} className="program-item" data-aos="fade-up">
-                <div className="program-image">
-                  <img 
-                    src={program.image} 
-                    alt={program.title}
-                    onError={(e) => {
-                      e.target.src = "/assests/images/fallback.jpg";
-                    }}
-                  />
+      <main>
+        <section className="programs-section" id="programs" aria-labelledby="programs-heading">
+          <div className="programs-container">
+            <h2>OUR PROGRAMS</h2>
+            <h1 id="programs-heading">What We Offer</h1>
+            
+            <div className="programs-grid" role="list">
+              {programs.map((program) => (
+                <div key={program.id} className="program-item" data-aos="fade-up" role="listitem">
+                  <div className="program-image">
+                    <img 
+                      src={program.image} 
+                      alt={`${program.title} program illustration`}
+                      onError={(e) => {
+                        e.target.src = "/assests/images/fallback.jpg";
+                        e.target.alt = "Default program illustration";
+                      }}
+                    />
+                  </div>
+                  <div className="program-content">
+                    <h3>{program.title}</h3>
+                    <p>{program.description}</p>
+                    <a 
+                      href={`/programs/${program.id}`} 
+                      className="read-more"
+                      aria-label={`Learn more about ${program.title}`}
+                    >
+                      Read More →
+                    </a>
+                  </div>
                 </div>
-                <div className="program-content">
-                  <h3>{program.title}</h3>
-                  <p>{program.description}</p>
-                  <a href="#" className="read-more">Read More →</a>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
       <Footer />
     </div>
   );
