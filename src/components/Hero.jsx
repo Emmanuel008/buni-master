@@ -6,7 +6,7 @@ const Hero = () => {
       <section className="hero">
         <div className="hero-image">
           <img 
-            src="./assests/images/saba.jpg"
+            src="./assests/images/Hero.jpg"
             alt="Hub of Hubs"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />

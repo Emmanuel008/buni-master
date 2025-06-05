@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+// Removed unused react-leaflet imports: MapContainer, TileLayer, Marker, Popup
+// Removed unused leaflet imports: L, markerIcon2x, markerIcon, markerShadow
+// Removed leaflet icon fix
+
+// Import the new OpenLayers map component (moved to top)
+import MapWithOpenLayers from './MapWithOpenLayers';
 
 const SingleCard = ({ image, name, role, company, sector, location, id, onMore, extra }) => {
   const navigate = useNavigate();
@@ -64,6 +70,8 @@ const Space = () => {
       company: "ICT",
       description: "TechTrain Academy is a premier training and consulting institution",
       image: "./assests/images/master12.jpg",
+      lat: -6.369028, // Example coordinate for Dodoma, needs verification
+      lng: 35.748519, // Example coordinate for Dodoma, needs verification
       extra: {
         contactName: "Eng. Vedasto Biyaka",
         contactEmail: "vedasto.biyaka@katubuka.com",
@@ -97,6 +105,8 @@ const Space = () => {
       name: "Wency Tech",
       company: "Renewable Energy",
       image: "./assests/images/BAM.png",
+      lat: -2.5164, // Coordinate for Wency Tech (Mwanza)
+      lng: 32.9175, // Coordinate for Wency Tech (Mwanza)
       extra: {
         contactName: "Wenceslaus Frank",
         contactEmail: "wenceslausfrank@gmail.com",
@@ -130,6 +140,8 @@ const Space = () => {
       name: "Njombe FDC",
       company: "Education",
       image: "./assests/images/maendeleo.jpg",
+      lat: -9.3333, // Coordinate for Njombe FDC (Njombe)
+      lng: 34.7667, // Coordinate for Njombe FDC (Njombe)
       extra: {
         contactName: "Adam Rogers",
         contactEmail: "adam.kasema@moe.go.tz",
@@ -163,6 +175,8 @@ const Space = () => {
       name: "SIDO TLED HUB-Mwanza",
       company: "ICT",
       image: "./assests/images/sido.png",
+      lat: -2.5164, // Coordinate for SIDO TLED HUB (Mwanza)
+      lng: 32.9175, // Coordinate for SIDO TLED HUB (Mwanza)
       extra: {
         contactName: "Hassan Juma Ally",
         contactEmail: "hassanally63@gmail.com",
@@ -196,6 +210,8 @@ const Space = () => {
       name: "CDTI Mlale-innovation centre",
       company: "ICT",
       image: "./assests/images/mlale.jpg",
+      lat: -8.4833, // Example coordinate for Iringa, needs verification for Mlale specifically
+      lng: 35.6922, // Example coordinate for Iringa, needs verification for Mlale specifically
       extra: {
         contactName: "Mwendo Mnambala",
         contactEmail: "mwendo.mnambala@jamii.go.tz",
@@ -229,6 +245,8 @@ const Space = () => {
       name: "JAMII OUTREACH Innovation-Centre",
       company: "Education",
       image: "./assests/images/saba.jpg",
+      lat: -6.7924, // Coordinate for Jamii Outreach (Dar es Salaam)
+      lng: 39.2083, // Coordinate for Jamii Outreach (Dar es Salaam)
       extra: {
         contactName: "Alphonce Arone Sikabena",
         contactEmail: "sikabena.alphonce@gmail.com",
@@ -262,6 +280,8 @@ const Space = () => {
       name: "Nafasi Talent Space",
       company: "Creative Industries",
       image: "./assests/images/dtb1.png",
+      lat: -3.6667, // Example coordinate for Shinyanga, needs verification
+      lng: 32.7167, // Example coordinate for Shinyanga, needs verification
       extra: {
         contactName: "Ms Hafswa Hassan",
         contactEmail: "hafksha@gmail.com",
@@ -295,6 +315,8 @@ const Space = () => {
       name: "HORTI-SAVVY SOLUTIONS",
       company: "Agriculture",
       image: "./assests/images/Logowiz_ai_crafted_logo.png",
+      lat: -9.3333, // Example coordinate for Mbeya Region (Rungwe district), needs verification
+      lng: 33.4500, // Example coordinate for Mbeya Region (Rungwe district), needs verification
       extra: {
         contactName: "Erick Liyumba",
         contactEmail: "erickliyumba1@gmail.com",
@@ -328,6 +350,8 @@ const Space = () => {
       name: "Incubators za maji",
       company: "Manufacturing",
       image: "./assests/images/saba.jpg",
+      lat: -2.3500, // Example coordinate for Geita Region (Nyang'hwale), needs verification
+      lng: 32.0167, // Example coordinate for Geita Region (Nyang'hwale), needs verification
       extra: {
         contactName: "Gaza Efloni Mkwama P.O.BOX 352 NYANG'HWALE GEITA",
         contactEmail: "gazamkwama71@gmail.com",
@@ -361,6 +385,8 @@ const Space = () => {
       name: "KIBOHUB TANZANIA",
       company: "ICT",
       image: "./assests/images/saba.jpg",
+      lat: -6.7924, // Coordinate for Kibohub (Dar es Salaam)
+      lng: 39.2083, // Coordinate for Kibohub (Dar es Salaam)
       extra: {
         contactName: "Adamu Mwinyikayoka",
         contactEmail: "kibohub@gmail.com",
@@ -395,6 +421,8 @@ const Space = () => {
       name: "Shamba Box",
       company: "Agriculture",
       image: "./assests/images/saba.jpg",
+      lat: -6.369028, // Example coordinate, needs verification
+      lng: 34.888822, // Example coordinate, needs verification
       extra: {
         contactName: "Seth Charles Mkisi",
         contactEmail: "info@shambabox.org",
@@ -416,6 +444,8 @@ const Space = () => {
       name: "Taifa Tekk",
       company: "Education",
       image: "./assests/images/saba.jpg",
+      lat: -6.369028, // Example coordinate, needs verification
+      lng: 34.888822, // Example coordinate, needs verification
       extra: {
         contactName: "Said Hozza",
         contactEmail: "sahozza@tatechhub.com",
@@ -437,6 +467,8 @@ const Space = () => {
       name: "MEI Centre",
       company: "Manufacturing",
       image: "./assests/images/irdp.jpg",
+      lat: -3.3667, // Coordinate for MEI Centre (Morogoro)
+      lng: 37.3333, // Coordinate for MEI Centre (Morogoro)
       extra: {
         contactName: "Winnie Donald",
         contactEmail: "wdonald@irdp.ac.tz",
@@ -458,6 +490,8 @@ const Space = () => {
       name: "Makonda Renewable Innovation Hub",
       company: "Agriculture",
       image: "./assests/images/saba.jpg",
+      lat: -6.369028, // Example coordinate, needs verification
+      lng: 34.888822, // Example coordinate, needs verification
       extra: {
         contactName: "Emilian John Shija",
         contactEmail: "Shijaemilian@gmail.com",
@@ -582,6 +616,7 @@ const Space = () => {
         </div>
 
         {/* Map Section */}
+        {/* Replace the react-leaflet map with the OpenLayers map */} 
         <div style={{
           flex: '1',
           background: '#fff',
@@ -590,16 +625,7 @@ const Space = () => {
           boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
           height: '400px',
         }}>
-          <iframe
-            title="Map of Tanzania showing innovation spaces locations"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4080938.061789!2d34.0!3d-6.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1234567890"
-            width="100%"
-            height="100%"
-            style={{ border: 0, borderRadius: '8px' }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+          <MapWithOpenLayers founders={founders} />
         </div>
       </div>
 
@@ -1051,11 +1077,15 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Sector:</strong> Education</li>
           <li style={liStyle}><strong>Type of Space:</strong> Research & Development Hub</li>
           <li style={liStyle}><strong>Year Established:</strong> 2019</li>
-          <li style={liStyle}><strong>Target Audience:</strong> All (Early-stage startups, Youth Entrepreneurs, Rural Innovators)</li>
-          <li style={liStyle}><strong>Description:</strong> Jamii Outreach Digital Innovation Centre supports startups in education through entrepreneurship bootcamps, digital literacy, and AI utilization.</li>
+          <li style={liStyle}><strong>Target Audience:</strong> All (Early-stage startups, Youth Entrepreneurs, Rural Innovators)
+          </li>
+          <li style={liStyle}><strong>Description:</strong> Jamii Outreach Digital Innovation Centre supports startups in education through entrepreneurship bootcamps, digital literacy, and AI utilization.
+          </li>
           <li style={liStyle}><strong>Programs Offered:</strong> Entrepreneurship bootcamps, business development, pitching, marketing, digital literacy, leadership, intellectual property management, ICT, AI</li>
-          <li style={liStyle}><strong>Main Challenge:</strong> Limited funding, poor infrastructure, inaccessible internet, low tech capacity</li>
-          <li style={liStyle}><strong>Area of Collaboration:</strong> All (funding, mentorship, workshops, industry partnerships, policy advocacy)</li>
+          <li style={liStyle}><strong>Main Challenge:</strong> Limited funding, poor infrastructure, inaccessible internet, low tech capacity
+          </li>
+          <li style={liStyle}><strong>Area of Collaboration:</strong> All (funding, mentorship, workshops, industry partnerships, policy advocacy)
+          </li>
         </ul>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <button 
@@ -1326,7 +1356,8 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Type of Space:</strong> Maker Space</li>
           <li style={liStyle}><strong>Year Established:</strong> 2018</li>
           <li style={liStyle}><strong>Target Audience:</strong> Youth Entrepreneurs, Peasants</li>
-          <li style={liStyle}><strong>Description:</strong> Makonda Renewable Innovation Hub supports startups in renewable energy and space technology, offering satellite data access and technical mentorship.</li>
+          <li style={liStyle}><strong>Description:</strong> Makonda Renewable Innovation Hub supports startups in renewable energy and space technology, offering satellite data access and technical mentorship.
+          </li>
           <li style={liStyle}><strong>Programs Offered:</strong> Business development training</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Poor equipment</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Workshops, technical support</li>

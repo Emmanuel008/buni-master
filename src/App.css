@@ -299,7 +299,7 @@ body {
 .about-section {
   width: 100%;
   background-color: white;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   margin: 2rem 0;
 }
 
@@ -351,7 +351,7 @@ body {
 .happening-section {
   width: 100%;
   background-color: white;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   margin: 2rem 0;
 }
 
@@ -687,7 +687,7 @@ body {
 .success-section {
   width: 100%;
   background-color: white;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   margin: 2rem 0;
 }
 
@@ -1550,7 +1550,7 @@ body {
 .space-section {
   width: 100%;
   background-color: white;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   margin: 2rem 0;
 }
 
@@ -1716,5 +1716,14 @@ body {
   .header-left {
     flex-direction: column;
     gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section,
+  .happening-section,
+  .success-section,
+  .space-section {
+    padding: 0 0.5rem;
   }
 }
