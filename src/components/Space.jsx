@@ -38,25 +38,48 @@ const SingleCard = ({ image, name, role, company, sector, location, id, onMore, 
       </div>
       <div style={{ padding: '18px 16px 16px 16px', width: '100%', textAlign: 'center' }}>
         <h3 style={{ margin: 0, fontWeight: 700, fontSize: 20, color: '#222' }}>{name}</h3>
-        <div style={{ fontSize: 14, color: '#888', margin: '6px 0 10px 0' }}>{role}</div>
-        {sector && (
-          <span style={{
-            display: 'inline-block',
-            background: '#e0f7fa',
-            color: '#00796b',
-            borderRadius: '12px',
-            padding: '4px 12px',
-            fontSize: 13,
-            fontWeight: 600,
-            marginBottom: 6,
-          }}>{sector}</span>
+        {/* Only show sector and More button for Gunzert House */}
+        {name === 'Gunzert House' ? (
+          <>
+            {sector && (
+              <span style={{
+                display: 'inline-block',
+                background: '#e0f7fa',
+                color: '#00796b',
+                borderRadius: '12px',
+                padding: '4px 12px',
+                fontSize: 13,
+                fontWeight: 600,
+                marginBottom: 6,
+              }}>{sector}</span>
+            )}
+            <div style={{ marginTop: 10 }}>
+              <button onClick={onMore} style={{ background: 'none', color: '#FF6347', border: 'none', cursor: 'pointer', fontWeight: 600, fontSize: 15, textDecoration: 'underline' }}>More</button>
+            </div>
+          </>
+        ) : (
+          <>
+            <div style={{ fontSize: 14, color: '#888', margin: '6px 0 10px 0' }}>{role}</div>
+            {sector && (
+              <span style={{
+                display: 'inline-block',
+                background: '#e0f7fa',
+                color: '#00796b',
+                borderRadius: '12px',
+                padding: '4px 12px',
+                fontSize: 13,
+                fontWeight: 600,
+                marginBottom: 6,
+              }}>{sector}</span>
+            )}
+            {location && (
+              <div style={{ fontSize: 12, color: '#aaa', marginTop: 6 }}>{location}</div>
+            )}
+            <div style={{ marginTop: 10 }}>
+              <button onClick={onMore} style={{ background: 'none', color: '#FF6347', border: 'none', cursor: 'pointer', fontWeight: 600, fontSize: 15, textDecoration: 'underline' }}>More</button>
+            </div>
+          </>
         )}
-        {location && (
-          <div style={{ fontSize: 12, color: '#aaa', marginTop: 6 }}>{location}</div>
-        )}
-        <div style={{ marginTop: 10 }}>
-          <button onClick={onMore} style={{ background: 'none', color: '#FF6347', border: 'none', cursor: 'pointer', fontWeight: 600, fontSize: 15, textDecoration: 'underline' }}>More</button>
-        </div>
       </div>
     </div>
   );
@@ -506,6 +529,212 @@ const Space = () => {
         collaborations: "Workshops, technical support",
         supportedByCostech: "Yes",
         spaceName: "Makonda Renewable Innovation Hub"
+      }
+    },
+    {
+      id: 16,
+      name: "Agriedo Hub",
+      company: "Agriculture",
+      image: "./assests/images/AFRICA.png", // Chose AFRICA.png as a placeholder, can be changed
+      lat: -7.778, // Iringa approximate latitude
+      lng: 35.693, // Iringa approximate longitude
+      extra: {
+        contactName: "HADIJA JABIR PHERRI",
+        contactEmail: "agriedoltd@gmail.com",
+        phoneNumber: "0756999118",
+        spaceType: "Incubator, Co Working Space",
+        yearEstablished: "2023",
+        numStartups: "3000",
+        sectorFocus: "Agriculture",
+        targetAudience: "Youth Entrepreneurs, Women Entrepreneurs",
+        supportNeeded: "Infrastructure (e.g., space, equipment, internet)",
+        supportNeededOther: "Team, Networking Opportunities and Capacity building",
+        collaborations: "Access to funding (e.g., grants, seed capital, investors)",
+        collaborationsOther: "Mentorship Programs, Work shops and Bootcamps event",
+        challenges: "Low Sustainability, Misuse of Fund.",
+        interestedTraining: "Yes",
+        trainingTopics: "Agribusiness",
+        interestedEvents: "Yes",
+        eventFocus: "Donors, NGOS, Universities",
+        supportedByCostech: "No",
+        openToPartnerships: "Yes",
+        partnerTypes: "Donors, NGOS, Universities",
+        capacityBuilding: "Yes",
+        additionalComments: "Agriedo Hub is a distinctive agribusiness innovation hub, strategically situated close to the grassroots with a mission to foster entrepreneurship and innovation among youth and women in the agriculture value chain. Through strategic partnerships with various stakeholders, Agriedo Hub endeavors to develop and implement impactful projects in the agriculture value chain with a particular focus on empowering women and youth.",
+        spaceName: "Agriedo Hub",
+        description: "Agriedo Hub is a distinctive agribusiness innovation hub, strategically situated close to the grassroots with a mission to foster entrepreneurship and innovation among youth and women in the agriculture value chain. Through strategic partnerships with various stakeholders, Agriedo Hub endeavors to develop and implement impactful projects in the agriculture value chain with a particular focus on empowering women and youth.",
+        programsOffered: "1.Business Development Support\n2. Incubation Programs\n3. Co-working Space"
+      }
+    },
+    {
+      id: 17,
+      name: "The University of Dodoma Innovation and Entrepreneurship Center (IEC)",
+      company: "Technology",
+      image: "./assests/images/master12.jpg", // Dodoma-related image
+      lat: -6.1630, // Approximate latitude for Dodoma
+      lng: 35.7516, // Approximate longitude for Dodoma
+      extra: {
+        contactName: "Salum Matotola",
+        contactEmail: "salum.matotola@udom.ac.tz and matotola2015@gmail.com",
+        phoneNumber: "+255 767 205266",
+        spaceType: "Accelerator",
+        yearEstablished: "2019",
+        numStartups: "3",
+        sectorFocus: "Technology",
+        targetAudience: "Early-stage startups",
+        supportNeeded: "Funding/Grants; Infrastructures; Technology resources, Linkages with partners; capacity building/training and policy advocacy",
+        supportNeededOther: "Other",
+        collaborations: "All above mentioned collaboration areas",
+        collaborationsOther: "Other",
+        challenges: "Infrastructures; Funding; mentorship and commercialization of innovative solutions",
+        interestedTraining: "Yes",
+        trainingTopics: "Business development, pitching and marketing",
+        interestedEvents: "Yes",
+        eventFocus: "Technology innovations, green innovations, manufacturing, agri- and tech-preneurship and related field",
+        supportedByCostech: "Yes",
+        openToPartnerships: "Yes",
+        partnerTypes: "investors, universities, NGOs, government agencies and any interested partner based on Tanzania rules and regulations",
+        capacityBuilding: "Product development and marketing under HEET Project",
+        additionalComments: "I am interested to see more linkages with a number of stakeholders from local and international levels",
+        spaceName: "The University of Dodoma Innovation and Entrepreneurship Center (IEC)",
+        description: "The Centre is mandated to promote and develop skills and provide a platform that is needed by UDOM community to endeavor in innovation and entrepreneurship."
+      }
+    },
+    {
+      id: 18,
+      name: "Gunzert House",
+      company: "Creative Industries",
+      image: "./assests/images/BAM.png", // Mwanza-related image
+      lat: -2.5164, // Approximate latitude for Mwanza
+      lng: 32.9175, // Approximate longitude for Mwanza
+      extra: {
+        contactName: "Dr Delphine Kessy",
+        contactEmail: "delphinekessy@gmail.com",
+        phoneNumber: "0754819590",
+        spaceType: "Incubator",
+        yearEstablished: "2022",
+        numStartups: "13",
+        sectorFocus: "Creative Industries",
+        targetAudience: "Early-stage startups",
+        location: "Gunzert House, located in Mwanza, Tanzania, is a historical building that serves as a cultural meeting point, emphasizing historical remembrance and sustainable tourism. Managed by the Gunzert House Foundation, the house aims to recreate historical journeys and foster discussions, exchanges, and idea realization among visitors.",
+        supportNeeded: "Market access and partnerships",
+        supportNeededOther: "NIL",
+        collaborations: "Access to funding (e.g., grants, seed capital, investors)",
+        collaborationsOther: "NIL",
+        challenges: "Local cultural entrepreneurs struggle to access markets and gain visibility, limiting their economic returns and hindering craft sustainability (World Bank, 2022). The lack of robust support systems for artists stifles innovation and modernization of traditional practices, resulting in a missed opportunity for community engagement and economic development",
+        interestedTraining: "Yes",
+        trainingTopics: "Yes, we would be interested in hosting training/workshops at Gunzert House. Potential topics include cultural entrepreneurship, digital marketing for artists, sustainable tourism, and traditional arts modernization, fostering skill development and innovation within Mwanza's cultural community.",
+        interestedEvents: "Yes",
+        eventFocus: "Yes, we would like to participate in startup competitions and pitch events, particularly in cultural entrepreneurship, sustainable tourism, and creative arts innovation.",
+        supportedByCostech: "No",
+        openToPartnerships: "Yes",
+        partnerTypes: "Areas that would benefit from capacity building include leadership development, project management, space management, and entrepreneurship training. Additionally, support in financial literacy, monetization strategies, and business model development for cultural entrepreneurs would enhance their sustainability and growth.",
+        capacityBuilding: "Areas that would benefit from capacity building include leadership development, project management, space management, and entrepreneurship training. Additionally, support in financial literacy, monetization strategies, and business model development for cultural entrepreneurs would enhance their sustainability and growth.",
+        additionalComments: "We appreciate your efforts in supporting innovation in Tanzania and look forward to a successful collaboration that enhances cultural entrepreneurship and sustainable growth.",
+        spaceName: "Gunzert House",
+        description: "Gunzert House, located in Mwanza, Tanzania, is a historical building that serves as a cultural meeting point, emphasizing historical remembrance and sustainable tourism. Managed by the Gunzert House Foundation, the house aims to recreate historical journeys and foster discussions, exchanges, and idea realization among visitors."
+      }
+    },
+    {
+      id: 19,
+      name: "Mipango Entrepreneurship and Innovation Center",
+      company: "Manufacturing",
+      image: "./assests/images/irdp.jpg", // Dodoma/IRDP-related image
+      lat: -6.1630, // Approximate latitude for Dodoma
+      lng: 35.7516, // Approximate longitude for Dodoma
+      extra: {
+        contactName: "Winnie Donald",
+        contactEmail: "wdonald@irdp.ac.tz",
+        phoneNumber: "0782761872",
+        spaceType: "Incubator",
+        yearEstablished: "2020",
+        numStartups: "5",
+        sectorFocus: "Manufacturing",
+        targetAudience: "Youth Entrepreneurs",
+        supportNeeded: "Funding/Grants",
+        supportNeededOther: "Human resource",
+        collaborations: "Facilitation of workshops and boot camps",
+        collaborationsOther: "",
+        challenges: "Fund shortage, lack of facilities to support development of MVPs; lack of operational manual",
+        interestedTraining: "Yes",
+        trainingTopics: "Business idea pitching; preparation of innovation programs; service marketing",
+        interestedEvents: "Yes",
+        eventFocus: "Tech innovation",
+        supportedByCostech: "Yes",
+        openToPartnerships: "Yes",
+        partnerTypes: "Other innovation space organisation; COSTECH, MOEST; UNDP; UNESCO; StartHub Africa; WSHA; WFP; HLIs; NGOs",
+        capacityBuilding: "Proposal write up for funding/grants",
+        additionalComments: "Creating a policy that enables HLI in Tanzania to enforce and support innovation spaces for Student startups and local startups. Universities Hub should be a priority within academic institutions with strategic, action plans and budgets that actually work.",
+        spaceName: "Mipango Entrepreneurship and Innovation Center",
+        description: "Mipango Entrepreneurship and Innovation Center supports youth entrepreneurs in manufacturing by providing incubation services, business idea pitching, and innovation program preparation, with a focus on enabling student and local startups within academic institutions."
+      }
+    },
+    {
+      id: 20,
+      name: "Jamii Talk",
+      company: "Education",
+      image: "./assests/images/saba.jpg", // Education/club-related image
+      lat: -3.3869, // Approximate latitude for Arusha
+      lng: 36.6822, // Approximate longitude for Arusha
+      extra: {
+        contactName: "Emmanuel kasomi",
+        contactEmail: "kasomi@jamiitalk.com",
+        phoneNumber: "0767441933",
+        spaceType: "Accelerator, Club",
+        yearEstablished: "2022",
+        numStartups: "0",
+        sectorFocus: "Education",
+        targetAudience: "Early-stage startups",
+        supportNeeded: "Infrastructure (e.g., space, equipment, internet)",
+        supportNeededOther: "Resources to uplift this program",
+        collaborations: "Industry partnerships",
+        collaborationsOther: "",
+        challenges: "Lack of funds Developing this club",
+        interestedTraining: "Yes",
+        trainingTopics: "Business development, leadership and education",
+        interestedEvents: "Yes",
+        eventFocus: "Edtech",
+        supportedByCostech: "No",
+        openToPartnerships: "Yes",
+        partnerTypes: "Universities and government agencies",
+        capacityBuilding: "Networking",
+        additionalComments: "I would like COSTECH to see our idea and develop it.",
+        spaceName: "Jamii Talk",
+        description: "Jamii Talk is an education-focused accelerator and club in Arusha, aiming to support early-stage startups with business development, leadership, and education programs, while seeking partnerships and resources to uplift the initiative."
+      }
+    },
+    {
+      id: 21,
+      name: "Kiwanda Innovation Center",
+      company: "Education",
+      image: "./assests/images/saba.jpg", // Education/innovation-related image
+      lat: -5.1333, // Approximate latitude for Muheza (Tanga region)
+      lng: 38.7667, // Approximate longitude for Muheza (Tanga region)
+      extra: {
+        contactName: "Moi Mathias Mwakikoti",
+        contactEmail: "moi.mwakikoti@moe.go.tz",
+        phoneNumber: "0653554195",
+        spaceType: "Incubator",
+        yearEstablished: "2022",
+        numStartups: "2",
+        sectorFocus: "Education",
+        targetAudience: "Early-stage startups",
+        supportNeeded: "Infrastructure (e.g., space, equipment, internet)",
+        supportNeededOther: "Internet (Dish)",
+        collaborations: "Facilitation of workshops and boot camps",
+        collaborationsOther: "Training",
+        challenges: "Internet",
+        interestedTraining: "Yes",
+        trainingTopics: "Leadership, business development",
+        interestedEvents: "Yes",
+        eventFocus: "Social impact startups",
+        supportedByCostech: "Yes",
+        openToPartnerships: "Yes",
+        partnerTypes: "Universities and NGO's",
+        capacityBuilding: "Leadership modeling",
+        additionalComments: "Society is still away from technology impact",
+        spaceName: "Kiwanda Innovation Center",
+        description: "Kiwanda Innovation Center in Muheza supports early-stage startups in education, focusing on leadership, business development, and social impact, while addressing infrastructure and technology challenges."
       }
     }
   ]);
@@ -1138,7 +1367,7 @@ const SpaceDetails = ({ founder }) => {
           <li style={liStyle}><strong>Year Established:</strong> 2025</li>
           <li style={liStyle}><strong>Target Audience:</strong> Early-stage startups</li>
           <li style={liStyle}><strong>Description:</strong> Nafasi Talent Space is an Afro-centric creative talent incubator in Shinyanga, focusing on youth innovation and cultural entrepreneurship.</li>
-          <li style={liStyle}><strong>Programs Offered:</strong> Ethical branding, modest fashion, digital storytelling, entrepreneurship, mental wellness, faith-aligned creative leadership</li>
+          <li style={liStyle}><strong>Programs Offered:</strong> Ethical branding, modest fashion, digital storytelling, entrepreneurship, mental wellness, and faith-aligned creative leadership</li>
           <li style={liStyle}><strong>Main Challenge:</strong> Limited funding, rural infrastructure gaps, low digital access, cultural misconceptions</li>
           <li style={liStyle}><strong>Area of Collaboration:</strong> Workshops, startup competitions</li>
         </ul>

@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Other Links</h3>
           <ul>
-            <li><a href="/captur-eac" aria-label="Visit CAPTUR-EAC">CAPTUR-EAC</a></li>
+            <li><a href="https://ulead.iucea.org/" aria-label="Visit ULead Project">ULead Project</a></li>
             <li><a href="/about" aria-label="Learn more about us">About</a></li>
             <li><a href="/community" aria-label="Join our community">Community</a></li>
             <li><a href="/news" aria-label="Read our news">News</a></li>
