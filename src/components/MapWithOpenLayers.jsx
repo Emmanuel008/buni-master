@@ -105,28 +105,16 @@ const MapWithOpenLayers = ({ founders }) => {
         const coordinate = evt.coordinate;
         const founderData = feature.get('founderData');
 
-        // Construct popup content with basic HTML
+        // Construct popup content with only name, sector, email, and phone
         let popupContent = `<strong>${founderData.name}</strong><br/>`;
-
-        // Add location/address
-        if (founderData.extra?.location || founderData.extra?.spaceName) {
-            popupContent += `<div>${founderData.extra.location || founderData.extra.spaceName}</div>`;
+        if (founderData.extra?.sectorFocus) {
+          popupContent += `<div>Sector: ${founderData.extra.sectorFocus}</div>`;
         }
-
-        // Add description (checking different fields)
-        if (founderData.description || founderData.extra?.description || founderData.extra?.additionalComments) {
-             // Limit description length for popup
-            const description = founderData.description || founderData.extra.description || founderData.extra.additionalComments;
-            const truncatedDescription = description.length > 150 ? description.substring(0, 150) + '...' : description;
-            popupContent += `<div>Description: ${truncatedDescription}</div>`;
-        }
-
-        // Add contact info
         if (founderData.extra?.contactEmail) {
-            popupContent += `<div>Email: ${founderData.extra.contactEmail}</div>`;
+          popupContent += `<div>Email: ${founderData.extra.contactEmail}</div>`;
         }
         if (founderData.extra?.phoneNumber) {
-            popupContent += `<div>Phone: ${founderData.extra.phoneNumber}</div>`;
+          popupContent += `<div>Phone: ${founderData.extra.phoneNumber}</div>`;
         }
 
         contentRef.current.innerHTML = popupContent;

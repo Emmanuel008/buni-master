@@ -535,7 +535,7 @@ const Space = () => {
       id: 16,
       name: "Agriedo Hub",
       company: "Agriculture",
-      image: "./assests/images/AFRICA.png", // Chose AFRICA.png as a placeholder, can be changed
+      image: "./assests/images/saba.jpg", // Chose AFRICA.png as a placeholder, can be changed
       lat: -7.778, // Iringa approximate latitude
       lng: 35.693, // Iringa approximate longitude
       extra: {
