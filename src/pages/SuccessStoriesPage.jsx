@@ -65,6 +65,24 @@ const SuccessStoriesPage = () => {
                 </p>
               </div>
             </div>
+
+            <div className="service-item" data-aos="fade-up">
+              <div className="service-text">
+                <h3 className="h2">INNOVATION ECOSYSTEM REPORT</h3>
+                <p>
+                  Click document below to download.<br />
+                  <a 
+                    className="smoothscroll btn btn--stroke" 
+                    href="/assests/images/INNOVATION ECOSYSTEM REPORT_2025_v8.pdf" 
+                    style={{ color: '#FFA500' }}
+                    aria-label="Download Innovation Ecosystem Report document"
+                    download="INNOVATION ECOSYSTEM REPORT_2025_v8.pdf"
+                  >
+                    <b>INNOVATION ECOSYSTEM REPORT</b>
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Right Side - Image */}
