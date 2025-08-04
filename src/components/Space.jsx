@@ -22,8 +22,8 @@ const SingleCard = ({ image, name, role, company, sector, location, id, onMore, 
         boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
         overflow: 'hidden',
         width: '100%',
-        height: '400px', // Fixed height for all cards
-        minHeight: '400px', // Ensure minimum height
+        height: '350px', // Fixed height for all cards
+        minHeight: '350px', // Ensure minimum height
         margin: 'auto',
         display: 'flex',
         flexDirection: 'column',
@@ -34,7 +34,7 @@ const SingleCard = ({ image, name, role, company, sector, location, id, onMore, 
     >
       <div onClick={handleClick} style={{ 
         width: '100%', 
-        height: 200, // Fixed image height
+        height: 180, // Fixed image height
         overflow: 'hidden', 
         background: '#f3f3f3',
         flexShrink: 0 // Prevent image from shrinking
