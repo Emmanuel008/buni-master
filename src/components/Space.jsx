@@ -22,64 +22,84 @@ const SingleCard = ({ image, name, role, company, sector, location, id, onMore, 
         boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
         overflow: 'hidden',
         width: '100%',
-        maxWidth: 300,
-        minWidth: 220,
+        height: '400px', // Fixed height for all cards
+        minHeight: '400px', // Ensure minimum height
         margin: 'auto',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
         transition: 'box-shadow 0.2s',
         cursor: 'pointer',
         position: 'relative',
       }}
     >
-      <div onClick={handleClick} style={{ width: '100%', height: 140, overflow: 'hidden', background: '#f3f3f3' }}>
+      <div onClick={handleClick} style={{ 
+        width: '100%', 
+        height: 200, // Fixed image height
+        overflow: 'hidden', 
+        background: '#f3f3f3',
+        flexShrink: 0 // Prevent image from shrinking
+      }}>
         <img src={image} alt={name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       </div>
-      <div style={{ padding: '18px 16px 16px 16px', width: '100%', textAlign: 'center' }}>
-        <h3 style={{ margin: 0, fontWeight: 700, fontSize: 20, color: '#222' }}>{name}</h3>
-        {/* Only show sector and More button for Gunzert House */}
-        {name === 'Gunzert House' ? (
-          <>
-            {sector && (
-              <span style={{
-                display: 'inline-block',
-                background: '#e0f7fa',
-                color: '#00796b',
-                borderRadius: '12px',
-                padding: '4px 12px',
-                fontSize: 13,
-                fontWeight: 600,
-                marginBottom: 6,
-              }}>{sector}</span>
-            )}
-            <div style={{ marginTop: 10 }}>
-              <button onClick={onMore} style={{ background: 'none', color: '#FF6347', border: 'none', cursor: 'pointer', fontWeight: 600, fontSize: 15, textDecoration: 'underline' }}>More</button>
-            </div>
-          </>
-        ) : (
-          <>
-            <div style={{ fontSize: 14, color: '#888', margin: '6px 0 10px 0' }}>{role}</div>
-            {sector && (
-              <span style={{
-                display: 'inline-block',
-                background: '#e0f7fa',
-                color: '#00796b',
-                borderRadius: '12px',
-                padding: '4px 12px',
-                fontSize: 13,
-                fontWeight: 600,
-                marginBottom: 6,
-              }}>{sector}</span>
-            )}
-            {location && (
-              <div style={{ fontSize: 12, color: '#aaa', marginTop: 6 }}>{location}</div>
-            )}
-            <div style={{ marginTop: 10 }}>
-              <button onClick={onMore} style={{ background: 'none', color: '#FF6347', border: 'none', cursor: 'pointer', fontWeight: 600, fontSize: 15, textDecoration: 'underline' }}>More</button>
-            </div>
-          </>
-        )}
+      <div style={{ 
+        padding: '18px 16px 16px 16px', 
+        width: '100%', 
+        textAlign: 'center',
+        flex: 1, // Take remaining space
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+      }}>
+        <div>
+          <h3 style={{ margin: 0, fontWeight: 700, fontSize: 20, color: '#222' }}>{name}</h3>
+          {/* Only show sector and More button for Gunzert House */}
+          {name === 'Gunzert House' ? (
+            <>
+              {sector && (
+                <span style={{
+                  display: 'inline-block',
+                  background: '#e0f7fa',
+                  color: '#00796b',
+                  borderRadius: '12px',
+                  padding: '4px 12px',
+                  fontSize: 13,
+                  fontWeight: 600,
+                  marginBottom: 6,
+                }}>{sector}</span>
+              )}
+            </>
+          ) : (
+            <>
+              <div style={{ fontSize: 14, color: '#888', margin: '6px 0 10px 0' }}>{role}</div>
+              {sector && (
+                <span style={{
+                  display: 'inline-block',
+                  background: '#e0f7fa',
+                  color: '#00796b',
+                  borderRadius: '12px',
+                  padding: '4px 12px',
+                  fontSize: 13,
+                  fontWeight: 600,
+                  marginBottom: 6,
+                }}>{sector}</span>
+              )}
+              {location && (
+                <div style={{ fontSize: 12, color: '#aaa', marginTop: 6 }}>{location}</div>
+              )}
+            </>
+          )}
+        </div>
+        <div style={{ marginTop: 'auto' }}>
+          <button onClick={onMore} style={{ 
+            background: 'none', 
+            color: '#FF6347', 
+            border: 'none', 
+            cursor: 'pointer', 
+            fontWeight: 600, 
+            fontSize: 15, 
+            textDecoration: 'underline' 
+          }}>More</button>
+        </div>
       </div>
     </div>
   );
@@ -267,7 +287,7 @@ const Space = () => {
       id: 6,
       name: "JAMII OUTREACH Innovation-Centre",
       company: "Education",
-      image: "./assests/images/saba.jpg",
+      image: "./assests/images/outreach.jpg",
       lat: -6.7924, // Coordinate for Jamii Outreach (Dar es Salaam)
       lng: 39.2083, // Coordinate for Jamii Outreach (Dar es Salaam)
       extra: {
@@ -372,7 +392,7 @@ const Space = () => {
       id: 9,
       name: "Incubators za maji",
       company: "Manufacturing",
-      image: "./assests/images/saba.jpg",
+      image: "./assests/images/maji.jpg",
       lat: -2.3500, // Example coordinate for Geita Region (Nyang'hwale), needs verification
       lng: 32.0167, // Example coordinate for Geita Region (Nyang'hwale), needs verification
       extra: {
@@ -407,7 +427,7 @@ const Space = () => {
       id: 10,
       name: "KIBOHUB TANZANIA",
       company: "ICT",
-      image: "./assests/images/saba.jpg",
+      image: "./assests/images/kibo.jpeg",
       lat: -6.7924, // Coordinate for Kibohub (Dar es Salaam)
       lng: 39.2083, // Coordinate for Kibohub (Dar es Salaam)
       extra: {
@@ -443,7 +463,7 @@ const Space = () => {
       id: 12,
       name: "Shamba Box",
       company: "Agriculture",
-      image: "./assests/images/saba.jpg",
+      image: "./assests/images/shamba.jpeg",
       lat: -6.369028, // Example coordinate, needs verification
       lng: 34.888822, // Example coordinate, needs verification
       extra: {
@@ -466,7 +486,7 @@ const Space = () => {
       id: 13,
       name: "Taifa Tekk",
       company: "Education",
-      image: "./assests/images/saba.jpg",
+      image: "./assests/images/taifa.webp",
       lat: -6.369028, // Example coordinate, needs verification
       lng: 34.888822, // Example coordinate, needs verification
       extra: {
@@ -512,7 +532,7 @@ const Space = () => {
       id: 15,
       name: "Makonda Renewable Innovation Hub",
       company: "Agriculture",
-      image: "./assests/images/saba.jpg",
+      image: "./assests/images/makonda.jpeg",
       lat: -6.369028, // Example coordinate, needs verification
       lng: 34.888822, // Example coordinate, needs verification
       extra: {
@@ -535,7 +555,7 @@ const Space = () => {
       id: 16,
       name: "Agriedo Hub",
       company: "Agriculture",
-      image: "./assests/images/saba.jpg", // Chose AFRICA.png as a placeholder, can be changed
+      image: "./assests/images/agried.png", // Chose AFRICA.png as a placeholder, can be changed
       lat: -7.778, // Iringa approximate latitude
       lng: 35.693, // Iringa approximate longitude
       extra: {
@@ -568,9 +588,9 @@ const Space = () => {
     },
     {
       id: 17,
-      name: "The University of Dodoma Innovation and Entrepreneurship Center (IEC)",
+      name: "Dodoma (IEC) centre",
       company: "Technology",
-      image: "./assests/images/master12.jpg", // Dodoma-related image
+      image: "./assests/images/dodoma.jpeg", // Dodoma-related image
       lat: -6.1630, // Approximate latitude for Dodoma
       lng: 35.7516, // Approximate longitude for Dodoma
       extra: {
@@ -604,7 +624,7 @@ const Space = () => {
       id: 18,
       name: "Gunzert House",
       company: "Creative Industries",
-      image: "./assests/images/BAM.png", // Mwanza-related image
+      image: "./assests/images/gunzert.jpg", // Mwanza-related image
       lat: -2.5164, // Approximate latitude for Mwanza
       lng: 32.9175, // Approximate longitude for Mwanza
       extra: {
@@ -673,7 +693,7 @@ const Space = () => {
       id: 20,
       name: "Jamii Talk",
       company: "Education",
-      image: "./assests/images/saba.jpg", // Education/club-related image
+      image: "./assests/images/jamiitalk.jpg", // Education/club-related image
       lat: -3.3869, // Approximate latitude for Arusha
       lng: 36.6822, // Approximate longitude for Arusha
       extra: {
@@ -707,7 +727,7 @@ const Space = () => {
       id: 21,
       name: "Kiwanda Innovation Center",
       company: "Education",
-      image: "./assests/images/saba.jpg", // Education/innovation-related image
+      image: "./assests/images/kiwanda.jpg", // Education/innovation-related image
       lat: -5.1333, // Approximate latitude for Muheza (Tanga region)
       lng: 38.7667, // Approximate longitude for Muheza (Tanga region)
       extra: {
@@ -822,25 +842,40 @@ const Space = () => {
           padding: '2rem',
           borderRadius: '10px',
           boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
+          height: '400px',
+          overflow: 'auto',
         }}>
           <h2 style={{
             color: '#FF6347',
             fontSize: '1.5rem',
             marginBottom: '1rem',
             fontWeight: 600,
-          }}>About Innovation Spaces</h2>
+          }}>Welcome to the Tanzania InnovationSpaces Pool Page!</h2>
           <p style={{
             color: '#666',
             lineHeight: 1.6,
-            marginBottom: '1rem',
+            marginBottom: '0',
           }}>
-            Innovation spaces in Tanzania are hubs of creativity and technological advancement, fostering entrepreneurship and economic growth. These spaces provide essential resources, mentorship, and networking opportunities for startups and innovators across various sectors including ICT, Agriculture, Manufacturing, and Education.
-          </p>
-          <p style={{
-            color: '#666',
-            lineHeight: 1.6,
-          }}>
-            Our network of innovation spaces includes incubators, accelerators, maker spaces, and research & development hubs, each contributing uniquely to Tanzania's innovation ecosystem. These spaces are strategically located across the country to ensure accessibility and regional development.
+            The Tanzania Commission for Science and Technology (COSTECH), under its national mandate 
+            to coordinate and strengthen the innovation ecosystem, is working actively to support innovation 
+            spaces across the country. In partnership with the Ministry of Education, Science and Technology (MoEST), 
+            COSTECH has developed a National Guideline for Innovation Spaces and a Standardized Curriculum for 
+            Innovation Space Managers. These tools are designed to ensure effective coordination, sustainable 
+            operations, and impactful programming within innovation spaces in Tanzania.
+            <br /><br />
+            This platform serves as a central hub where you can explore and connect with registered 
+            innovation spaces across the country. The page provides updated profiles, bios, and 
+            contact details of each space. Many of these spaces have received support from COSTECH 
+            in the form of mentorship, funding, or technical assistance, while others collaborate 
+            closely with the Commission to implement innovation driven initiatives.
+            <br /><br />
+            By sharing this information, COSTECH aims to increase visibility, foster collaboration, 
+            and encourage meaningful partnerships among innovation stakeholders.
+            <br /><br />
+            We invite you to browse, connect, and partner with these spaces to 
+            collectively drive innovation and inclusive development in Tanzania. 
+            The list of spaces will be updated regularly to reflect the continued 
+            growth of the ecosystem.
           </p>
         </div>
 

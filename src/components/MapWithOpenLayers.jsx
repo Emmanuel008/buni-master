@@ -105,8 +105,8 @@ const MapWithOpenLayers = ({ founders }) => {
         const coordinate = evt.coordinate;
         const founderData = feature.get('founderData');
 
-        // Construct popup content with only name, sector, email, and phone
-        let popupContent = `<strong>${founderData.name}</strong><br/>`;
+        // Construct popup content with proper hub name, sector, email, and phone
+        let popupContent = `<strong>${founderData.extra?.spaceName || founderData.name}</strong><br/>`;
         if (founderData.extra?.sectorFocus) {
           popupContent += `<div>Sector: ${founderData.extra.sectorFocus}</div>`;
         }

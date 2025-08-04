@@ -1629,6 +1629,8 @@ body {
   text-align: left;
   display: flex;
   flex-direction: column;
+  height: 400px; /* Fixed height for all cards */
+  min-height: 400px; /* Ensure minimum height */
 }
 
 .space-card:hover {
@@ -1641,6 +1643,7 @@ body {
   height: 200px;
   overflow: hidden;
   background: #f8f9fa;
+  flex-shrink: 0; /* Prevent image from shrinking */
 }
 
 .space-image img {
@@ -1651,6 +1654,10 @@ body {
 
 .space-info {
   padding: 1.5rem;
+  flex: 1; /* Take remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .space-info h3 {
@@ -1682,6 +1689,7 @@ body {
   color: #666;
   font-size: 0.95rem;
   line-height: 1.5;
+  flex: 1; /* Take remaining space */
 }
 
 @media (max-width: 768px) {
