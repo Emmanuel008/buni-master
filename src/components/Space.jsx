@@ -859,8 +859,8 @@ const Space = () => {
             The Tanzania Commission for Science and Technology (COSTECH), under its national mandate 
             to coordinate and strengthen the innovation ecosystem, is working actively to support innovation 
             spaces across the country. In partnership with the Ministry of Education, Science and Technology (MoEST), 
-            COSTECH has developed a National Guideline for Innovation Spaces and a Standardized Curriculum for 
-            Innovation Space Managers. These tools are designed to ensure effective coordination, sustainable 
+            COSTECH has developed <strong>a National Guideline for Innovation Spaces and a Standardized Curriculum for 
+            Innovation Space Managers.</strong> These tools are designed to ensure effective coordination, sustainable 
             operations, and impactful programming within innovation spaces in Tanzania.
             <br /><br />
             This platform serves as a central hub where you can explore and connect with registered 
