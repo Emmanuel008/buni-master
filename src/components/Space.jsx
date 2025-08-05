@@ -357,7 +357,7 @@ const Space = () => {
       id: 8,
       name: "HORTI-SAVVY SOLUTIONS",
       company: "Agriculture",
-      image: "./assests/images/Logowiz_ai_crafted_logo.png",
+      image: "./assests/images/hortsavy.jpg",
       lat: -9.3333, // Example coordinate for Mbeya Region (Rungwe district), needs verification
       lng: 33.4500, // Example coordinate for Mbeya Region (Rungwe district), needs verification
       extra: {
@@ -427,7 +427,7 @@ const Space = () => {
       id: 10,
       name: "KIBOHUB TANZANIA",
       company: "ICT",
-      image: "./assests/images/kibo.jpeg",
+      image: "./assests/images/makondaaaa.webp",
       lat: -6.7924, // Coordinate for Kibohub (Dar es Salaam)
       lng: 39.2083, // Coordinate for Kibohub (Dar es Salaam)
       extra: {
@@ -463,7 +463,7 @@ const Space = () => {
       id: 12,
       name: "Shamba Box",
       company: "Agriculture",
-      image: "./assests/images/shamba.jpeg",
+      image: "./assests/images/shox.jpg",
       lat: -6.369028, // Example coordinate, needs verification
       lng: 34.888822, // Example coordinate, needs verification
       extra: {
@@ -532,7 +532,7 @@ const Space = () => {
       id: 15,
       name: "Makonda Renewable Innovation Hub",
       company: "Agriculture",
-      image: "./assests/images/makonda.jpeg",
+      image: "./assests/images/renewable.avif",
       lat: -6.369028, // Example coordinate, needs verification
       lng: 34.888822, // Example coordinate, needs verification
       extra: {
@@ -590,7 +590,7 @@ const Space = () => {
       id: 17,
       name: "Dodoma (IEC) centre",
       company: "Technology",
-      image: "./assests/images/dodoma.jpeg", // Dodoma-related image
+      image: "./assests/images/shamba.jpg", // Dodoma-related image
       lat: -6.1630, // Approximate latitude for Dodoma
       lng: 35.7516, // Approximate longitude for Dodoma
       extra: {
@@ -798,7 +798,7 @@ const Space = () => {
       <div style={{
         width: '100%',
         height: '240px',
-        background: `url('assests/images/saba.jpg') center/cover no-repeat`,
+        background: `url('assests/images/tech.png') center/cover no-repeat`,
         position: 'relative',
         borderRadius: '10px',
         marginBottom: '2rem',
