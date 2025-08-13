@@ -139,10 +139,10 @@ const MapWithOpenLayers = ({ founders }) => {
   // Removed triggerPopup as it's not needed for clicking markers
 
   return (
-    <div>
+    <div style={{ width: '100%', height: '100%' }}>
       {/* Removed the button as clicks on markers will trigger popups */}
 
-      <div ref={mapRef} className="map" style={{ width: '100%', height: '400px' }}></div>
+      <div ref={mapRef} className="map" style={{ width: '100%', height: '100%', borderRadius: '10px', overflow: 'hidden' }}></div>
 
       <div ref={popupRef} className="ol-popup">
         <button ref={closerRef} className="ol-popup-closer" aria-label="Close Popup"></button>

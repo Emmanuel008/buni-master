@@ -17,7 +17,7 @@ const SingleCard = ({ image, name, role, company, sector, location, id, onMore, 
   return (
     <div
       style={{
-        background: '#fff',
+        background: '#FF6347',
         borderRadius: '20px',
         boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
         overflow: 'hidden',
@@ -51,7 +51,7 @@ const SingleCard = ({ image, name, role, company, sector, location, id, onMore, 
         justifyContent: 'space-between'
       }}>
         <div>
-          <h3 style={{ margin: 0, fontWeight: 700, fontSize: 20, color: '#222' }}>{name}</h3>
+          <h3 style={{ margin: 0, fontWeight: 700, fontSize: 20, color: 'white' }}>{name}</h3>
           {/* Only show sector and More button for Gunzert House */}
           {name === 'Gunzert House' ? (
             <>
@@ -70,7 +70,7 @@ const SingleCard = ({ image, name, role, company, sector, location, id, onMore, 
             </>
           ) : (
             <>
-              <div style={{ fontSize: 14, color: '#888', margin: '6px 0 10px 0' }}>{role}</div>
+              <div style={{ fontSize: 14, color: 'white', margin: '6px 0 10px 0' }}>{role}</div>
               {sector && (
                 <span style={{
                   display: 'inline-block',
@@ -84,7 +84,7 @@ const SingleCard = ({ image, name, role, company, sector, location, id, onMore, 
                 }}>{sector}</span>
               )}
               {location && (
-                <div style={{ fontSize: 12, color: '#aaa', marginTop: 6 }}>{location}</div>
+                <div style={{ fontSize: 12, color: 'white', marginTop: 6 }}>{location}</div>
               )}
             </>
           )}
@@ -92,7 +92,7 @@ const SingleCard = ({ image, name, role, company, sector, location, id, onMore, 
         <div style={{ marginTop: 'auto' }}>
           <button onClick={onMore} style={{ 
             background: 'none', 
-            color: '#FF6347', 
+            color: 'white', 
             border: 'none', 
             cursor: 'pointer', 
             fontWeight: 600, 
@@ -838,7 +838,7 @@ const Space = () => {
         {/* Description Sidebar */}
         <div style={{
           flex: '1',
-          background: '#fff',
+          background: '#FF6347',
           padding: '2rem',
           borderRadius: '10px',
           boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
@@ -846,13 +846,13 @@ const Space = () => {
           overflow: 'auto',
         }}>
           <h2 style={{
-            color: '#FF6347',
+            color: 'white',
             fontSize: '1.5rem',
             marginBottom: '1rem',
             fontWeight: 600,
           }}>Welcome to the Tanzania InnovationSpaces Pool Page!</h2>
           <p style={{
-            color: '#666',
+            color: 'white',
             lineHeight: 1.6,
             marginBottom: '0',
           }}>
@@ -883,7 +883,7 @@ const Space = () => {
         {/* Replace the react-leaflet map with the OpenLayers map */} 
         <div style={{
           flex: '1',
-          background: '#fff',
+          background: '#FF6347',
           padding: '1rem',
           borderRadius: '10px',
           boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
@@ -964,7 +964,7 @@ const Space = () => {
           textAlign: 'center', 
           margin: '2rem 0', 
           padding: '1.5rem', 
-          background: '#f8f8f8', 
+          background: '#FF6347', 
           borderRadius: '10px',
           border: '1px solid #eee'
         }}>
@@ -981,14 +981,14 @@ const Space = () => {
             flexWrap: 'wrap'
           }}>
             <div>
-              <p style={{ margin: '0.5rem 0', color: '#666' }}>
-                <strong style={{ color: '#333' }}>Contact Person:</strong> Mis Patience karua 
+              <p style={{ margin: '0.5rem 0', color: 'white' }}>
+                <strong style={{ color: 'white' }}>Contact Person:</strong> Mis Patience karua 
               </p>
-              <p style={{ margin: '0.5rem 0', color: '#666' }}>
-                <strong style={{ color: '#333' }}>Email:</strong> patience.karua@costech.or.tz
+              <p style={{ margin: '0.5rem 0', color: 'white' }}>
+                <strong style={{ color: 'white' }}>Email:</strong> patience.karua@costech.or.tz
               </p>
-              <p style={{ margin: '0.5rem 0', color: '#666' }}>
-                <strong style={{ color: '#333' }}>Phone:</strong> +255786599100
+              <p style={{ margin: '0.5rem 0', color: 'white' }}>
+                <strong style={{ color: 'white' }}>Phone:</strong> +255786599100
               </p>
             </div>
           </div>
@@ -1009,20 +1009,20 @@ const Modal = ({ children, onClose }) => (
     position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.35)', zIndex: 1000,
     display: 'flex', alignItems: 'center', justifyContent: 'center',
   }} onClick={onClose}>
-    <div style={{
-      background: '#fff',
-      borderRadius: 18,
-      padding: 0,
-      minWidth: 340,
-      maxWidth: 520,
-      width: '90%',
-      maxHeight: '90vh',
-      overflowY: 'auto',
-      position: 'relative',
-      boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
-      border: '1.5px solid #f3f3f3',
-      animation: 'popIn 0.18s cubic-bezier(.4,2,.6,1)'
-    }} onClick={e => e.stopPropagation()}>
+            <div style={{
+          background: '#FF6347',
+          borderRadius: 18,
+          padding: 0,
+          minWidth: 340,
+          maxWidth: 520,
+          width: '90%',
+          maxHeight: '90vh',
+          overflowY: 'auto',
+          position: 'relative',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
+          border: '1.5px solid #f3f3f3',
+          animation: 'popIn 0.18s cubic-bezier(.4,2,.6,1)'
+        }} onClick={e => e.stopPropagation()}>
       <div style={{
         background: 'linear-gradient(90deg, #FF6347 0%, #FF9472 100%)',
         borderRadius: '18px 18px 0 0',
@@ -1060,8 +1060,8 @@ const SpaceDetails = ({ founder }) => {
   if (founder.id === 1) {
     return (
       <div>
-        <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
-        <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+        <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
+        <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
           <li style={liStyle}><strong>Space Name:</strong> SmartPark Innovation</li>
           <li style={liStyle}><strong>Sector:</strong> ICT</li>
           <li style={liStyle}><strong>Type of Space:</strong> Incubator (Accelerator, Co-working Space, R&D Hub)</li>
@@ -1095,15 +1095,15 @@ const SpaceDetails = ({ founder }) => {
             <div style={{
               marginTop: '15px',
               padding: '15px',
-              background: '#f8f8f8',
+              background: '#FF6347',
               borderRadius: '8px',
               border: '1px solid #eee',
               textAlign: 'left'
             }}>
-              <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-              <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> Eng. Vedasto Biyaka</p>
-              <p style={{ margin: '5px 0' }}><strong>Email:</strong> vedasto.biyaka@katubuka.com</p>
-              <p style={{ margin: '5px 0' }}><strong>Phone:</strong> 0716893830</p>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> Eng. Vedasto Biyaka</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Email:</strong> vedasto.biyaka@katubuka.com</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> 0716893830</p>
             </div>
           )}
         </div>
@@ -1115,8 +1115,8 @@ const SpaceDetails = ({ founder }) => {
   if (founder.id === 2) {
     return (
       <div>
-        <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
-        <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+        <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
+        <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
           <li style={liStyle}><strong>Space Name:</strong> Wency Tech</li>
           <li style={liStyle}><strong>Sector:</strong> Renewable Energy</li>
           <li style={liStyle}><strong>Type of Space:</strong> Maker Space</li>
@@ -1150,15 +1150,15 @@ const SpaceDetails = ({ founder }) => {
             <div style={{
               marginTop: '15px',
               padding: '15px',
-              background: '#f8f8f8',
+              background: '#FF6347',
               borderRadius: '8px',
               border: '1px solid #eee',
               textAlign: 'left'
             }}>
-              <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-              <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> Wenceslaus Frank</p>
-              <p style={{ margin: '5px 0' }}><strong>Email:</strong> wenceslausfrank@gmail.com</p>
-              <p style={{ margin: '5px 0' }}><strong>Phone:</strong> 0620842438</p>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> Wenceslaus Frank</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Email:</strong> wenceslausfrank@gmail.com</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> 0620842438</p>
             </div>
           )}
         </div>
@@ -1170,8 +1170,8 @@ const SpaceDetails = ({ founder }) => {
   if (founder.id === 3) {
     return (
       <div>
-        <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
-        <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+        <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
+        <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
           <li style={liStyle}><strong>Space Name:</strong> Njombe FDC</li>
           <li style={liStyle}><strong>Sector:</strong> Education</li>
           <li style={liStyle}><strong>Type of Space:</strong> Incubator (Vocational College)</li>
@@ -1205,15 +1205,15 @@ const SpaceDetails = ({ founder }) => {
             <div style={{
               marginTop: '15px',
               padding: '15px',
-              background: '#f8f8f8',
+              background: '#FF6347',
               borderRadius: '8px',
               border: '1px solid #eee',
               textAlign: 'left'
             }}>
-              <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-              <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> Adam Rogers</p>
-              <p style={{ margin: '5px 0' }}><strong>Email:</strong> adam.kasema@moe.go.tz</p>
-              <p style={{ margin: '5px 0' }}><strong>Phone:</strong> 0762 018682</p>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> Adam Rogers</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Email:</strong> adam.kasema@moe.go.tz</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> 0762 018682</p>
             </div>
           )}
         </div>
@@ -1225,8 +1225,8 @@ const SpaceDetails = ({ founder }) => {
   if (founder.id === 4) {
     return (
       <div>
-        <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
-        <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+        <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
+        <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
           <li style={liStyle}><strong>Space Name:</strong> SIDO TLED HUB-Mwanza</li>
           <li style={liStyle}><strong>Sector:</strong> ICT</li>
           <li style={liStyle}><strong>Type of Space:</strong> Incubator</li>
@@ -1260,15 +1260,15 @@ const SpaceDetails = ({ founder }) => {
             <div style={{
               marginTop: '15px',
               padding: '15px',
-              background: '#f8f8f8',
+              background: '#FF6347',
               borderRadius: '8px',
               border: '1px solid #eee',
               textAlign: 'left'
             }}>
-              <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-              <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> Hassan Juma Ally</p>
-              <p style={{ margin: '5px 0' }}><strong>Email:</strong> hassanally63@gmail.com</p>
-              <p style={{ margin: '5px 0' }}><strong>Phone:</strong> +255784288101</p>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> Hassan Juma Ally</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Email:</strong> hassanally63@gmail.com</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> +255784288101</p>
             </div>
           )}
         </div>
@@ -1280,8 +1280,8 @@ const SpaceDetails = ({ founder }) => {
   if (founder.id === 5) {
     return (
       <div>
-        <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
-        <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+        <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
+        <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
           <li style={liStyle}><strong>Space Name:</strong> CDTI Mlale Digital Innovation Centre</li>
           <li style={liStyle}><strong>Sector:</strong> ICT</li>
           <li style={liStyle}><strong>Type of Space:</strong> Incubator</li>
@@ -1315,15 +1315,15 @@ const SpaceDetails = ({ founder }) => {
             <div style={{
               marginTop: '15px',
               padding: '15px',
-              background: '#f8f8f8',
+              background: '#FF6347',
               borderRadius: '8px',
               border: '1px solid #eee',
               textAlign: 'left'
             }}>
-              <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-              <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> Mwendo Mnambala</p>
-              <p style={{ margin: '5px 0' }}><strong>Email:</strong> mwendo.mnambala@jamii.go.tz</p>
-              <p style={{ margin: '5px 0' }}><strong>Phone:</strong> 0755428778</p>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> Mwendo Mnambala</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Email:</strong> mwendo.mnambala@jamii.go.tz</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> 0755428778</p>
             </div>
           )}
         </div>
@@ -1335,8 +1335,8 @@ const SpaceDetails = ({ founder }) => {
   if (founder.id === 6) {
     return (
       <div>
-        <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
-        <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+        <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
+        <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
           <li style={liStyle}><strong>Space Name:</strong> Jamii Outreach Digital Innovation Centre</li>
           <li style={liStyle}><strong>Sector:</strong> Education</li>
           <li style={liStyle}><strong>Type of Space:</strong> Research & Development Hub</li>
@@ -1374,15 +1374,15 @@ const SpaceDetails = ({ founder }) => {
             <div style={{
               marginTop: '15px',
               padding: '15px',
-              background: '#f8f8f8',
+              background: '#FF6347',
               borderRadius: '8px',
               border: '1px solid #eee',
               textAlign: 'left'
             }}>
-              <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-              <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> Alphonce Arone Sikabena</p>
-              <p style={{ margin: '5px 0' }}><strong>Email:</strong> sikabena.alphonce@gmail.com</p>
-              <p style={{ margin: '5px 0' }}><strong>Phone:</strong> +255755800697</p>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> Alphonce Arone Sikabena</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Email:</strong> sikabena.alphonce@gmail.com</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> +255755800697</p>
             </div>
           )}
         </div>
@@ -1394,8 +1394,8 @@ const SpaceDetails = ({ founder }) => {
   if (founder.id === 7) {
     return (
       <div>
-        <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
-        <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+        <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
+        <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
           <li style={liStyle}><strong>Space Name:</strong> Nafasi Talent Space</li>
           <li style={liStyle}><strong>Sector:</strong> Creative Industries</li>
           <li style={liStyle}><strong>Type of Space:</strong> Incubator (Afro-Centric Creative Talent Incubator)</li>
@@ -1429,15 +1429,14 @@ const SpaceDetails = ({ founder }) => {
             <div style={{
               marginTop: '15px',
               padding: '15px',
-              background: '#f8f8f8',
+              background: '#FF6347',
               borderRadius: '8px',
               border: '1px solid #eee',
               textAlign: 'left'
             }}>
-              <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-              <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> Ms Hafswa Hassan</p>
-              <p style={{ margin: '5px 0' }}><strong>Email:</strong> hafksha@gmail.com</p>
-              <p style={{ margin: '5px 0' }}><strong>Phone:</strong> 0743658582</p>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> Ms Hafswa Hassan</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> 0743658582</p>
             </div>
           )}
         </div>
@@ -1449,8 +1448,8 @@ const SpaceDetails = ({ founder }) => {
   if (founder.id === 8) {
     return (
       <div>
-        <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
-        <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+        <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
+        <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
           <li style={liStyle}><strong>Space Name:</strong> Horti-Savvy Solutions</li>
           <li style={liStyle}><strong>Sector:</strong> Agriculture</li>
           <li style={liStyle}><strong>Type of Space:</strong> Incubator</li>
@@ -1483,15 +1482,15 @@ const SpaceDetails = ({ founder }) => {
             <div style={{
               marginTop: '15px',
               padding: '15px',
-              background: '#f8f8f8',
+              background: '#FF6347',
               borderRadius: '8px',
               border: '1px solid #eee',
               textAlign: 'left'
             }}>
-              <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-              <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> Erick Liyumba</p>
-              <p style={{ margin: '5px 0' }}><strong>Email:</strong> erickliyumba1@gmail.com</p>
-              <p style={{ margin: '5px 0' }}><strong>Phone:</strong> 0657871647</p>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> Erick Liyumba</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Email:</strong> erickliyumba1@gmail.com</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> 0657871647</p>
             </div>
           )}
         </div>
@@ -1503,8 +1502,8 @@ const SpaceDetails = ({ founder }) => {
   if (founder.id === 9) {
     return (
       <div>
-        <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
-        <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+        <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
+        <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
           <li style={liStyle}><strong>Space Name:</strong> Incubators za Maji</li>
           <li style={liStyle}><strong>Sector:</strong> Manufacturing</li>
           <li style={liStyle}><strong>Type of Space:</strong> Incubator</li>
@@ -1538,15 +1537,15 @@ const SpaceDetails = ({ founder }) => {
             <div style={{
               marginTop: '15px',
               padding: '15px',
-              background: '#f8f8f8',
+              background: '#FF6347',
               borderRadius: '8px',
               border: '1px solid #eee',
               textAlign: 'left'
             }}>
-              <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-              <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> Gaza Efloni Mkwama</p>
-              <p style={{ margin: '5px 0' }}><strong>Email:</strong> gazamkwama71@gmail.com</p>
-              <p style={{ margin: '5px 0' }}><strong>Phone:</strong> 0714446940 / 0764987750</p>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> Gaza Efloni Mkwama</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Email:</strong> gazamkwama71@gmail.com</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> 0714446940 / 0764987750</p>
             </div>
           )}
         </div>
@@ -1558,8 +1557,8 @@ const SpaceDetails = ({ founder }) => {
   if (founder.id === 10) {
     return (
       <div>
-        <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
-        <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+        <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
+        <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
           <li style={liStyle}><strong>Space Name:</strong> Kibohub Tanzania</li>
           <li style={liStyle}><strong>Sector:</strong> ICT</li>
           <li style={liStyle}><strong>Type of Space:</strong> Accelerator</li>
@@ -1593,15 +1592,15 @@ const SpaceDetails = ({ founder }) => {
             <div style={{
               marginTop: '15px',
               padding: '15px',
-              background: '#f8f8f8',
+              background: '#FF6347',
               borderRadius: '8px',
               border: '1px solid #eee',
               textAlign: 'left'
             }}>
-              <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-              <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> Adamu Mwinyikayoka</p>
-              <p style={{ margin: '5px 0' }}><strong>Email:</strong> kibohub@gmail.com</p>
-              <p style={{ margin: '5px 0' }}><strong>Phone:</strong> 0768825770</p>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> Adamu Mwinyikayoka</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Email:</strong> kibohub@gmail.com</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> 0768825770</p>
             </div>
           )}
         </div>
@@ -1613,8 +1612,8 @@ const SpaceDetails = ({ founder }) => {
   if (founder.id === 15) {
     return (
       <div>
-        <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
-        <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+        <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
+        <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
           <li style={liStyle}><strong>Space Name:</strong> Makonda Renewable Innovation Hub</li>
           <li style={liStyle}><strong>Sector:</strong> Agriculture</li>
           <li style={liStyle}><strong>Type of Space:</strong> Maker Space</li>
@@ -1649,15 +1648,14 @@ const SpaceDetails = ({ founder }) => {
             <div style={{
               marginTop: '15px',
               padding: '15px',
-              background: '#f8f8f8',
+              background: '#FF6347',
               borderRadius: '8px',
               border: '1px solid #eee',
               textAlign: 'left'
             }}>
-              <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-              <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> Emilian John Shija</p>
-              <p style={{ margin: '5px 0' }}><strong>Email:</strong> Shijaemilian@gmail.com</p>
-              <p style={{ margin: '5px 0' }}><strong>Phone:</strong> 0750324942</p>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> Emilian John Shija</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> 0750324942</p>
             </div>
           )}
         </div>
@@ -1669,8 +1667,8 @@ const SpaceDetails = ({ founder }) => {
   if (founder.id === 12) {
     return (
       <div>
-        <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
-        <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+        <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
+        <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
           <li style={liStyle}><strong>Space Name:</strong> Shamba Box</li>
           <li style={liStyle}><strong>Sector:</strong> Agriculture</li>
           <li style={liStyle}><strong>Type of Space:</strong> Research & Development Hub</li>
@@ -1704,15 +1702,15 @@ const SpaceDetails = ({ founder }) => {
             <div style={{
               marginTop: '15px',
               padding: '15px',
-              background: '#f8f8f8',
+              background: '#FF6347',
               borderRadius: '8px',
               border: '1px solid #eee',
               textAlign: 'left'
             }}>
-              <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-              <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> Seth Charles Mkisi</p>
-              <p style={{ margin: '5px 0' }}><strong>Email:</strong> info@shambabox.org</p>
-              <p style={{ margin: '5px 0' }}><strong>Phone:</strong> 0756492406</p>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> Seth Charles Mkisi</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Email:</strong> info@shambabox.org</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> 0756492406</p>
             </div>
           )}
         </div>
@@ -1724,8 +1722,8 @@ const SpaceDetails = ({ founder }) => {
   if (founder.id === 13) {
     return (
       <div>
-        <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
-        <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+        <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
+        <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
           <li style={liStyle}><strong>Space Name:</strong> Tatech Hub</li>
           <li style={liStyle}><strong>Sector:</strong> Education</li>
           <li style={liStyle}><strong>Type of Space:</strong> Maker Space</li>
@@ -1759,15 +1757,15 @@ const SpaceDetails = ({ founder }) => {
             <div style={{
               marginTop: '15px',
               padding: '15px',
-              background: '#f8f8f8',
+              background: '#FF6347',
               borderRadius: '8px',
               border: '1px solid #eee',
               textAlign: 'left'
             }}>
-              <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-              <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> Said Hozza</p>
-              <p style={{ margin: '5px 0' }}><strong>Email:</strong> sahozza@tatechhub.com</p>
-              <p style={{ margin: '5px 0' }}><strong>Phone:</strong> 0684736765</p>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> Said Hozza</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Email:</strong> sahozza@tatechhub.com</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> 0684736765</p>
             </div>
           )}
         </div>
@@ -1779,8 +1777,8 @@ const SpaceDetails = ({ founder }) => {
   if (founder.id === 14) {
     return (
       <div>
-        <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
-        <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+        <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{founder.company}</h2>
+        <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
           <li style={liStyle}><strong>Space Name:</strong> MIPANGO ENTREPRENEURSHIP AND INNOVATION (MEI) CENTER</li>
           <li style={liStyle}><strong>Sector:</strong> Manufacturing</li>
           <li style={liStyle}><strong>Type of Space:</strong> Incubator</li>
@@ -1814,15 +1812,15 @@ const SpaceDetails = ({ founder }) => {
             <div style={{
               marginTop: '15px',
               padding: '15px',
-              background: '#f8f8f8',
+              background: '#FF6347',
               borderRadius: '8px',
               border: '1px solid #eee',
               textAlign: 'left'
             }}>
-              <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-              <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> Winnie Donald</p>
-              <p style={{ margin: '5px 0' }}><strong>Email:</strong> wdonald@irdp.ac.tz</p>
-              <p style={{ margin: '5px 0' }}><strong>Phone:</strong> 0782761872</p>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> Winnie Donald</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Email:</strong> wdonald@irdp.ac.tz</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> 0782761872</p>
             </div>
           )}
         </div>
@@ -1833,8 +1831,8 @@ const SpaceDetails = ({ founder }) => {
   // Default return for all other cards
   return (
     <div>
-      <h2 style={{ marginTop: 0, color: '#FF6347', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{extra.spaceName || founder.name}</h2>
-      <ul style={{ paddingLeft: 0, listStyle: 'none', color: '#333', fontSize: 15, margin: 0, textAlign: 'left' }}>
+      <h2 style={{ marginTop: 0, color: 'white', fontWeight: 700, fontSize: 20, marginBottom: 18, textAlign: 'left' }}>{extra.spaceName || founder.name}</h2>
+      <ul style={{ paddingLeft: 0, listStyle: 'none', color: 'white', fontSize: 15, margin: 0, textAlign: 'left' }}>
         <li style={liStyle}><strong>Space Name:</strong> {extra.spaceName || founder.name}</li>
         <li style={liStyle}><strong>Sector:</strong> {extra.sectorFocus || founder.company}</li>
         <li style={liStyle}><strong>Type of Space:</strong> {extra.spaceType}</li>
@@ -1873,19 +1871,19 @@ const SpaceDetails = ({ founder }) => {
           {showContact ? 'Hide Contact Details' : 'Show Contact Details'}
         </button>
         {showContact && (
-          <div style={{
-            marginTop: '15px',
-            padding: '15px',
-            background: '#f8f8f8',
-            borderRadius: '8px',
-            border: '1px solid #eee',
-            textAlign: 'left'
-          }}>
-            <h3 style={{ color: '#FF6347', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
-            <p style={{ margin: '5px 0' }}><strong>Contact Person:</strong> {extra.contactName}</p>
-            <p style={{ margin: '5px 0' }}><strong>Email:</strong> {extra.contactEmail}</p>
-            <p style={{ margin: '5px 0' }}><strong>Phone:</strong> {extra.phoneNumber}</p>
-          </div>
+                      <div style={{
+              marginTop: '15px',
+              padding: '15px',
+              background: '#FF6347',
+              borderRadius: '8px',
+              border: '1px solid #eee',
+              textAlign: 'left'
+            }}>
+              <h3 style={{ color: 'white', marginBottom: '10px', fontSize: '16px' }}>Contact Information</h3>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Contact Person:</strong> {extra.contactName}</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Email:</strong> {extra.contactEmail}</p>
+              <p style={{ margin: '5px 0', color: 'white' }}><strong>Phone:</strong> {extra.phoneNumber}</p>
+            </div>
         )}
       </div>
     </div>

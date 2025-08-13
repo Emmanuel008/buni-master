@@ -21,3 +21,24 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Build artifacts and archives
+*.zip
+*.tar.gz
+*.rar
+dist/
+out/
+.next/
+.nuxt/
+.vuepress/dist
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
