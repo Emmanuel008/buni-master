@@ -11,7 +11,7 @@ const SuccessStoriesPage = () => {
       <section className="success-hero" aria-labelledby="success-heading">
         <div className="hero-image">
           <img 
-            src="./assests/images/saba.jpg" 
+            src="./assests/images/tech.png" 
             alt="Buni Hub success stories"
           />
         </div>
